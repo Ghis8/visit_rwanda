@@ -1,7 +1,7 @@
 export type placesProps={
-    id?:number
+    id:number
     name:string 
-    images?:string[]
+    images:string[]
     description:string[]
 }
 

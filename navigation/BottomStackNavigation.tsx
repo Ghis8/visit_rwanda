@@ -68,7 +68,7 @@ const BottomStackNavigation = () => {
               <Text style={{color:tabLabel.focused?"rgb(154 52 18)":theme=='dark'?'gray':'black'}}>Profile</Text>
             ),
             tabBarIcon:(tabIcon)=>(
-              <Icon name='account-outline' size={24} color={tabIcon.focused?'rgb(154 52 18)':theme=='dark'?'gray':'black'} />
+              <Icon name='account' size={24} color={tabIcon.focused?'rgb(154 52 18)':theme=='dark'?'gray':'black'} />
             )
           }} 
         />

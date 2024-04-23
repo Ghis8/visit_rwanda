@@ -1,10 +1,11 @@
 import { View, Text, useColorScheme, ScrollView, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const Profile = (props:any) => {
+  const [edit,setEdit]=useState<boolean>(false)
   const theme=useColorScheme()
-  // console.log(props.route)
+
   return (
     <View className={theme == 'dark'?'bg-black flex-1':'bg-white flex-1'}>
       <View className='flex-row justify-between items-center mx-3 py-3'>
