@@ -1,8 +1,8 @@
 export type placesProps={
     id?:number
-    name?:string 
+    name:string 
     images?:string[]
-    description?:string[]
+    description:string[]
 }
 
 export const places:placesProps[]=[

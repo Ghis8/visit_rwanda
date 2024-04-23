@@ -16,7 +16,7 @@ const StackNavigation = () => {
         screenOptions={{
           headerShown:false
         }}
-        initialRouteName='getStarted'
+        initialRouteName='Home'
       >
         <Stack.Screen name="getStarted" component={GetStarted} />
         <Stack.Screen name="Login" component={Login} />

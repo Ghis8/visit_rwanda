@@ -1,20 +1,22 @@
-import { View, Text, TouchableOpacity, useColorScheme, FlatList } from 'react-native'
+import { View, Text, TouchableOpacity, useColorScheme, FlatList, Image } from 'react-native'
 import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/Feather'
 import { places, placesProps } from '../utils/constants'
 
 
-const Home = () => {
+const Home = (props:any) => {
     const theme=useColorScheme()
     const [place,setPlace]=useState<placesProps>(places[0])
   return (
     <View className={theme =='dark'?'bg-black flex-1':' flex-1 bg-white'}>
       <View className='flex-row justify-between items-center p-2'>
-        <TouchableOpacity>
-            <Icon 
-                name='menu' 
-                size={24} 
-                color={theme=='light' ? 'black':'white'} 
+        <TouchableOpacity
+            onPress={()=>props.navigation.navigate('Profile')}
+        >
+            <Image 
+                source={require('../assets/elon.jpg')}
+                className='w-8 h-8 rounded-full'
+                resizeMode='contain'
             />
         </TouchableOpacity>
         <Text className={
