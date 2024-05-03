@@ -16,7 +16,7 @@ const Login = (props:any) => {
   const signIn=()=>{
     if(ValidateEmailAddress(email)){
       if(email== 'test@gmail.com'){
-        return props.navigation.navigate('Home',{screen:'Profile'})
+        return props.navigation.navigate('Home',{screen:'explore'})
       }setError([...error,"invalid Credential"])
       
     }

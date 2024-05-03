@@ -1,117 +1,298 @@
-export type placesProps={
-    id:number
+export type PlaceProp={
+    image:string 
     name:string 
-    images:string[]
-    description:string[]
+    desc:string 
+    address?:string 
+    favorite:boolean
 }
 
-export const places:placesProps[]=[
+export type citiesProps={
+    id:number
+    city:string 
+    popular:boolean 
+    places:PlaceProp[]
+    description:string
+}
+
+export const cities:citiesProps[]=[
     {
         id:1,
-        name:'Kigali',
-        images:[
-            require('../assets/kigali1.jpg'),
-            require('../assets/kigali-genocide-memorial-rwanda.jpg'),
-            require('../assets/kigali-genocide-memorial-graves.jpg'),
-            require('../assets/where-to-stay-kigali-rwanda.jpg'),
-            require('../assets/hotels-in-kigali-serena.jpg')
-        ],
-        description:[
-            "Since most people fly to the bustling capital city of Kigali, why not start with Kigali as one of the best places to visit in Rwanda? Kigali is the cleanest city in all of Africa, and something you'll notice as soon as you get out of the airport.",
-            "The memorial is located in the Gisozi neighborhood and includes a museum, mass graves, and a research center. It’s an emotional visit and impossible to not shed a tear when you enter the the children\’s room dedicated to the young victims of the genocide. In this room, you can read very personal details like what these children wanted to become when they grow up, favorite books, and things to do. Realizing that this only happened two decades ago and that similar horrific things are still happening in other parts of our planet, is hard to imagine",
-            "Other interesting things to do in Kigali is visiting the Kigali City Tower that offers panoramic views over the city, viewing local artworks at the Inema Art Center or visit the traditional Caplaki Crafts Village where you can learn about the traditional Rwandan culture, buy handcrafted souvenirs or enjoy traditional dance performances. The Kimironko Market is another tip when you like to buy locally made souvenirs.",
-            "There are also some really good restaurants and bars to enjoy the nightlife in Kigali's City Center. We for example had dinner in Atelier Du Vin, a delightful place to have a generous taste of wine paired with delicious food and great views over the city.",
-            "There are several options of hotels in Kigali. We stayed for example in the Kigali M-hotel, a 4-star business hotel in the Center of Kigali, located on a hill with views over the city, including an outdoor swimming pool",
+        popular:true,
+        city:'Kigali',
+        places:[
+            {
+                name:'Camellia (MIC Building)',
+                image:require('../assets/camellia-mic.jpg'),
+                desc:" Camellia is a bit of redemption for the MIC Building. Perched up on the 11th floor, this cafe has an open view from three sides including a cool perspective on Kigali City Tower from the front. Camellia is an affordable cafe with good food (but sometimes questionable service) and an excellent lunch buffet. Make sure you choose a nice day because this really isn’t the best place to be during a storm.",
+                address:"Located at the top of (yet another) super weird, new mall in Kigali.",
+                favorite:false
+            },
+            {
+                name:'Juru Park',
+                image:require('../assets/kigali-juru-park.jpg'),
+                desc:"This place truly feels like it’s on top of Kigali. I’m not sure if this is the highest hill in the city, but it certainly comes close. I think it’s great that there’s a park up there and it’s a lovely place to come to relax away from the city. It’s quite wooded so you don’t get panoramic views, but there are a few awesome spots if you look around a bit. If you prefer your views with steak and cocktails, 1000 Hills Distillery isn’t far and it has a lovely view in the opposite direction.",
+                address:"Head through Gisozi and keep going up and up and up (and up) and you’ll eventually find yourself at Juru Park",
+                favorite:false
+            },
+            {
+                name:'Kigali Heights',
+                image:require('../assets/kigali-heights.jpg'),
+                desc:"This view is less about being up high, gazing across Kigali’s epic hills and more about the view up close of the Radisson Blu hotel, wedding roundabout, and the Convention Centre. The restaurant level at Kigali Heights has become a really nice place to hang out, especially on the weekend when it’s lively with people mulling around and enjoying their day. Java House is always busy and Delizia Italiana seems to be a destination unto itself these days. You have to sit close to the outer edge to get a nice view, or you can just get up out of your seat to snap some nice photos. I like what this part of town has become – if only the Car Free Zone in the city centre would take a few hints!",
+                address:"",
+                favorite:false
+            },
+            {
+                name:'Klab',
+                image:require('../assets/kigali-klab.jpg'),
+                desc:"The kLab takes up the entire 6th floor of Telecom House in Kacyiru and, though this prime viewing spot is actually an office space for IT people in Rwanda, they’re pretty open to visitors and also run regular events. So you should be able to weasel your way up to the top floor one way or another. The best part about this view is that you’ve got an almost 360 degree view of the city from Kacyiru back across to Nyarutarama and Gacuriro plus you can see over to Kimihurura and then across to town and beyond. If you’re lucky enough to be up here during a crazy rain storm it’s pretty spectacular",
+                address:"The kLab takes up the entire 6th floor of Telecom House in Kacyiru",
+                favorite:false
+            },
+            {
+                name:'Inzora Rooftop Cafe',
+                image:require('../assets/kigali-inzora-rooftop-cafe.jpg'),
+                desc:"This lovely little cafe has a wonderful view from the side of the hill in Kacyiru back to the city and it’s an awesome spot to watch the weather roll. If the main cafe section isn’t good enough for you, you can head up to their rooftop to really take in the scenery. Inzora Rooftop Cafe gets my vote for the best place for the most spectacular sunsets. They have a perfect view of the sun going down behind the city and I’m always blown away by how beautiful Kigali is anytime I come here. Fridays are my favourite days because they have wine and a weekly cocktail along with excellent tasting boards – but it’s a wonderful spot any day of the week",
+                address:"",
+                favorite:false
+            },
+            {
+                name:'Manor Hotel',
+                image:require('../assets/Kigali-swimming-manor-hotel.jpg'),
+                desc:"So the photo above is mostly of the hotel, the pool and the puffy clouds and doesn’t show the view at all, really, but it’s all I had! The view from the Manor is one of my original favourites, partly because you can take it in from their roof at Shere Sardar or from the grassy area beside the pool, but mostly because you can a great panorama of a good portion of the city. Once you start to be able to identify Kigali’s main buildings, this is a good place to come to see how the city fits together and where everything is. Plus you can eat Indian food or sip a cocktail at the same time which you can’t really argue with",
+                address:"",
+                favorite:false
+            },
+            {
+                name:'Mount Kigali',
+                image:require('../assets/kigali-mount-kigali.jpg'),
+                desc:"It look me ages to finally hike up Mount Kigali and I was really angry at myself for taking so long. It’s really stunning up there! The air is fresh, there are forests you can actually walk in, and it’s full of lovely views everywhere you turn. Most of the best views I found were more towards the opposite side of the city and it’s amazing to see bustling Kigali on one side of the hill and what seems like vast countryside just on the opposite side. If you want something to do while you’re up there, head to Fazenda Sengha for a spot of horse riding, zip lining, or archery. It’s a great place for a family day out up on the Mount. Or if you’re less into sports and more into beers, there are a couple of local pubs close to the top as well",
+                address:"",
+                favorite:false
+            },
+            {
+                name:'MTN Centre',
+                image:require('../assets/kigali-mtn-centre.jpg'),
+                desc:"Sip a coffee on the balcony at Bourbon MTN and take in an amazing view back over Green Hills school down the back of Nyarutarama. The view is the opposite side of the hill to the one you get from the Manor Hotel and it’s a lot more green and countryside-ish",
+                address:'Nyarutarama',
+                favorite:false
+            },
+            {
+                name:'Papyrus',
+                image:require('../assets/kigali-papyrus.jpg'),
+                desc:"I’m guessing that most of us only wander into Papyrus when the sun has gone down. In fact, I don’t know if I’ve ever seen Papyrus during the daylight hours and I even had to outsource this photo (thanks Sean!) to capture it in sunny and sober light. But whether you’re here during the day or whether you lurk in the rooftop shadows under the moonlight, you have to agree that the view is pretty spectacular. Since this photo was taken the hill opposite Papyrus has been developed with lots of new buildings that shine back at you with lots of sparkling lights which is quite pretty",
+                address:'',
+                favorite:false
+            },
+            {
+                name:'Pili Pili',
+                image:require('../assets/kigali-pili-pili.jpg'),
+                desc:"I think Pili Pili is my top pick for the best view in Kigali. Not only is it perched high on a hill, the restaurant itself has a bunch of different vantage points to take in. Chill by the pool as you look over the city, or head up to their second level for an even better look. Their location way out in Kibagabaga means that you have a view of pretty much the entire city unfolding below you. It’s a bit of a trek to get out here but absolutely worth the trip",
+                address:'Kibagabaga',
+                favorite:false
+            },
+            {
+                name:'Pure Africa',
+                image:require("../assets/kigali-pure-africa-coffee.jpg"),
+                desc:"This new cafe in Kimihurura has a view similar to Papyrus but from a bit further up the hill. Plus it’s a cafe and a bit of a more relaxed daytime hangout spot. I like that it feels like it’s sort of nestled in the trees, too. The coffee is great and it’s the sort of place you can chill out for awhile reading, working, or chatting with friends without feeling like they’re rushing you out the door.",
+                address:'Kimihurura',
+                favorite:false
+            },
+            {
+                name:'Sun City Hotel',
+                image:require("../assets/kigali-sun-city-hotel.jpg"),
+                desc:"When I mentioned to a friend that I was planning on writing an article about the best views in Kigali, he told me about Sun City Hotel deep into the cobbled streets of Nyamirambo. I’d heard about this place but had never been until recently when I accidentally stumbled onto it. My friend speaks the truth – it’s got quite the view! Add in friendly service and some fine brochettes and it makes an awesome place for some panoramic views of Kigali and you also get a glimpse at the farmland surrounding the city. You’re find Panorama Ten to Two a bit lower on the hill which has a great view as well and is a bit more lively a bar.",
+                address:'Nyamirambo',
+                favorite:false
+            },
+            {
+                name:'Ubumwe Grande',
+                image:require("../assets/kigali-ubumwe-grande.jpeg"),
+                desc:"The Ubumwe Grande hotel is one of the tallest buildings on one of the tallest hills in the city and, as a result, it definitely has the sexiest view. There’s a restaurant up top with a view towards Kacyiru and beyond and on the other side there’s a rooftop pool (for guests only, unfortunately) with a cool bird’s eye view of the town centre and beyond to Mount Kigali. In my opinion this is the best nighttime Kigali view because of the way the stars reflect of Kigali City Tower on a clear night. It’s all magical and stuff.",
+                address:'Nyarugenge District ',
+                favorite:false
+            }
             
-        ]
+        ],
+        description:"Kigali never fails to amazing me with how beautiful it is. Whether it’s walking around the city’s hills in the hot sun, zipping around town on a moto as the sun sets, or having a cocktail at some restaurant as the stars sparkle at night, it’s a stunning place. Even when it’s chucking it down with rain it still somehow manages to be magical. The skies seem so big here and you can often see the weather rolling in or out which is amazing to see. It’s less amazing when it’s rain and you’re on a moto… but it still manages to impress me!"
     },
     {
         id:2,
-        name:'Umusambi Village',
-        images:[
-            require('../assets/umusambi-village-rwanda.jpg'),
-            require('../assets/umusambi-wetland-area-rwanda.jpg'),
+        popular:false,
+        city:'Rubavu',
+        places:[
+            {
+                name:'Lake Kivu',
+                image:require('../assets/rubavu-lake-kivu.webp'),
+                desc:'',
+                address:'Rubavu District',
+                favorite:false
+            },
+            {
+                name:"Lake Kivu Serena Hotel",
+                image:require("../assets/lake-kivuevening-shot-poolside.jpg"),
+                desc:"Lake Kivu Serena Hotel is located in Rubavu on the shores of Lake Kivu, where the pristine beaches and sparkling waters of Africa’s sixth-largest lake come together in a breathtaking fashion. Lake Kivu Serena has 2 meeting rooms (15-150 pax), 66 guest rooms, restaurants and a swimming pool nestling among palm trees and manicured gardens.",
+                address:"Rubavu District",
+                favorite:false
+            },
+            {
+                name:'Hill View Hotel',
+                image:require("../assets/hill-view-hotel-lake.jpg"),
+                desc:"Hill View Hotel Lake Kivu is located in Rubavu district on the shores of Lake Kivu. It is conveniently situated 5 minutes away from the border of Goma (DRC), 5 minutes away from Rubavu Airport and 1:30 hours away from the Volcanoes National Park. Hill View hotel offers accommodation and 3 meeting facilities with a capacity ranging from 50 to 350 people.",
+                address:'Rubavu',
+                favorite:false
+            }
         ],
-        description:[
-            "Umusambi Village Conservancy is Rwanda’s first wildlife sanctuary and nature reserve, home to disabled Grey-crowned cranes that are rescued from illegal wildlife trade and captivity. The Grey-Crowned Crane is the national bird of Uganda and has a prominent place on Uganda's flag.",
-            "In Umusambi Village in Rwanda, they give these beautiful cranes that are unable to return into the wild a second chance to enjoy nature again in a restored 21-hectare wetland area.",
-            
-        ]
+        description:''
     },
     {
         id:3,
-        name:'Volcanoes National Park',
-        images:[
-            require('../assets/volcanoes-national-park-rwanda.jpg'),
-            require('../assets/gorilla-trekking-safari-rwanda.jpg'),
-            require('../assets/tracking-mountain-gorillas-on-foot.jpg'),
-            require('../assets/rwanda-gorilla-safari.jpg')
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
         ],
-        description:[
-            "One of the most popular activities in Rwanda is gorilla trekking in Volcanoes National Park. The country is home to over half of the world's population of critically endangered mountain gorillas. Although the number of gorillas is slowly rising due to conservation efforts, they are still endangered and need 24/7 protection. That makes it a privilege we are able to go on guided treks to see these incredible primates in their natural habitat.",
-            "The trekking can be challenging, but the experience of seeing a gorilla up close is truly unforgettable.",
-            "Volcanoes National Park is listed as a UNESCO World Heritage Site. The park is also home to five of the eight volcanoes of the Virunga Mountains. Enough reasons to be listed as one of the best places to see in Rwanda.",
-            "Like to go on a Gorilla Trekking in Rwanda? Obtain your gorilla permit at 1500 USD in advance as there are limited spots on the daily gorilla treks. Tracking these gorillas usually takes around 4-6 hours of which you spend a maximum of one hour with a habituated Gorilla family. In my case, we tracked the Kwitonda Gorilla family; a family of 17 mountain gorillas, including a baby gorilla, living on the Gahinga mountain in Volcanoes National Park.",
-            
-        ]
+        description:''
     },
     {
         id:4,
-        name:'Musanze',
-        images:[
-            require('../assets/musanze-volcanoes-national-park.jpg'),
-            require('../assets/tiloreza-volcanoes-ecolodge-rwanda.jpg'),
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
         ],
-        description:[
-            "Musanze is a small town nearby Volcanoes National Park. The town is a perfect base for your gorilla trekking safari. If you are up for a cultural experience, you can also visit the nearby Iby'Iwacu Cultural Village. Here, you will learn more about the traditional way of life of local Rwandans and enjoy their traditional dance performances.",
-            "A good affordable place to stay in Musanze, is the Tiloreza Volcanoes Ecolodge; a boutique hotel in Kinigi. Most of the tourists staying there, are participating in a gorilla trekking experience. They also have a small poolside to relax after your gorilla trek. The nice thing about Tiloreza is that they also reach out to the community to support both environmental and educational efforts."
-        ]
+        description:''
     },
     {
         id:5,
-        name:'Akagera National Park',
-        images:[
-            require('../assets/akagera-national-park-rwanda.jpg'),
-            require('../assets/akagera-national-park-hippos.jpg'),
-            require("../assets/game-drive-akagera-national-park.jpg"),
-            require("../assets/lakes-akagera-national-park.jpg"),
-            require("../assets/akagera-game-lodge-rwanda.webp")
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
         ],
-        description:[
-            "Managed by African Parks, Akagera National Park is located just 2,5 - 3 hours from Kigali in the eastern part of Rwanda and is known for its savannah plains, wetlands, and lakes boasting diverse wildlife. It’s one of Central Africa’s largest protected wetlands and the last remaining refuge for savannah-adapted species in Rwanda.",
-            "Popular things to do in Akagera are guided game drives or self-drives with stunning mountain views as backdrop, in search of lions, leopards, herds of elephants, zebras, antelopes and towers of giraffes, as well as boat trips to spot hippos, crocodiles, and many colorful birds.",
-            "Akagera borders Tanzania, benefitting from the wildlife roaming freely between these two East African countries. The national park is becoming more popular to do a full-day game drive. Despite it’s the only national park in Rwanda where you can find the Big Five, it’s still rare to spot a rhino or lion. Some of the lodges in Akagera also offer walking safaris",
-            "Birdwatching lovers should visit Lake Shakani (400 bird species) and Lake Ihema (155 bird species), located in the southern section of Akagera National Park. At Lake Shakani, you can camp near the lake and take part in sports fishing. Lake Ihema is the biggest lake inside the park and popular for its boat safaris or sunset boat cruises.",
-            "Akagera Game Lodge by Mantis, located inside the Akagera National Park. A beautiful lodge at the lake where you can watch a beautiful sunset and sunrise."
-        ]
+        description:''
     },
     {
         id:6,
-        name:'Nyungwe Forest',
-        images:[
-            require('../assets/nyungwe-forest-rwanda.jpg'),
-            require('../assets/hiking-trails-nyungwe-forest.jpg'),
-            require('../assets/nyungwe-national-park-rwanda.webp')
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
         ],
-        description:[
-            "When in Rwanda, you can’t miss out on Nyungwe National Park. Most tourists visit the rainforest for chimpanzee trekking, but it isn’t the only reason why Nyungwe Forest is one of the best places to visit in Rwanda.",
-            "Apart from tracking chimpanzees, you are able to spot Rwanda’s national animal, the rare Golden Monkey, and other primate species such as gray-cheeked mangabeys and baboons.",
-            "It’s an important conservation area in Africa with a special biodiversity of plant species, mammals, and over 300 species of birds. It’s one of the biggest montane forests remaining in Eastern Africa and visitors can take part in guided treks, canopy walks, and bird-watching tours",
-
-        ]
+        description:''
     },
     {
         id:7,
-        name:'Lake Kivu',
-        images:[
-            require('../assets/lake-kivu-rwanda.jpg'),
-            require('../assets/lake-kivu-western-rwanda.jpg'),
-            require('../assets/hotel-lake-kivu-rwanda.jpg')
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
         ],
-        description:[
-            "Because of its natural beauty, Lake Kivu is without a doubt one of the best places to visit in the western part of Rwanda. The lake lies on the border of Rwanda and DRC. Visitors can go on boat trips to the many islands in Rwanda’s largest lake, go fishing or hike one of the trails around the lake to enjoy its emerald-green beauty.",
-            "You can even join water sport activities on the crystal clear waters of Lake Kivu, such as stand-up paddleboarding (SUP) or kayaking with local fishermen entertaining you along the way. I also highly recommend visiting one of the nearby fishing villages on the shores of Lake Kivu.",
-            "Great places to stay at Lake Kivu are the Lake Kivu Serena Hotel, located in the northern part of Lake Kivu in the resort town of Rubavu or Mantis Kivu Marina Bay Hotel in Muhari, a mere 1 km from Kamembe International Airport in the South West of Rwanda, where you can have your breakfast with stunning views over Lake Kivu."
-        ]
+        description:''
+    },
+    {
+        id:8,
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
+        ],
+        description:''
+    },
+    {
+        id:9,
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
+        ],
+        description:''
+    },
+    {
+        id:10,
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
+        ],
+        description:''
+    },
+    {
+        id:11,
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
+        ],
+        description:''
+    },
+    {
+        id:12,
+        popular:false,
+        city:'',
+        places:[
+            {
+                name:'',
+                image:'',
+                desc:'',
+                address:'',
+                favorite:false
+            }
+        ],
+        description:''
     },
 ]
+

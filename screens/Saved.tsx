@@ -1,7 +1,7 @@
 import { View, Text, useColorScheme, TouchableOpacity, FlatList, Dimensions } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { places } from '../utils/constants'
+import { cities } from '../utils/constants'
 import VisitCard from '../components/VisitCard'
 
 const Saved = (props:any) => {
@@ -25,14 +25,15 @@ const Saved = (props:any) => {
         numColumns={numColumn}
         className='mt-2'
         showsVerticalScrollIndicator={false}
-        data={places}
+        data={cities}
         keyExtractor={(item)=>String(item.id)}
-        renderItem={({item})=>(
+        renderItem={({item,index})=>(
           <VisitCard 
-            image={item.images[0]}
-            title={item.name}
+            image={item.places[0].image}
+            title={item.places[0].name}
             column_width={column_width}
             height={screen_height*0.3}
+            favorite
           />
         )}
       />

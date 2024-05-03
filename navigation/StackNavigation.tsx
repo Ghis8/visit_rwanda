@@ -7,6 +7,7 @@ import Register from '../screens/auth/Register'
 import GetStarted from '../screens/GetStarted'
 import Home from '../screens/Home'
 import BottomStackNavigation from './BottomStackNavigation'
+import CompleteResgistration from '../screens/CompleteResgistration'
 
 const Stack=createNativeStackNavigator()
 const StackNavigation = () => {
@@ -22,6 +23,7 @@ const StackNavigation = () => {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Home" component={BottomStackNavigation} />
+        <Stack.Screen name='completeRegistration' component={CompleteResgistration} />
       </Stack.Navigator>
     </NavigationContainer>
   )
