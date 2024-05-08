@@ -59,12 +59,12 @@ const Register = (props:any) => {
             visible ?
             <TouchableOpacity
               onPress={()=>setVisible(false)} 
-              className='absolute right-16 top-5'>
+              className='absolute right-[18%] top-[30%]'>
               <Icon name="eye" size={22} color='gray' />
             </TouchableOpacity>:
             <TouchableOpacity 
               onPress={()=>setVisible(true)}
-              className='absolute right-16 top-5'>
+              className='absolute right-[18%] top-[30%]'>
             <Icon name="eye-off" size={22} color='gray' />
           </TouchableOpacity>
           }

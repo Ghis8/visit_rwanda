@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, useColorScheme, FlatList, Image, ImageBackground, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/Feather'
-import { cities, citiesProps } from '../utils/constants'
+import { cities, citiesProps, mostPopularPlaces } from '../utils/constants'
 import VisitCard from '../components/VisitCard'
 
 
@@ -97,10 +97,36 @@ const Home = (props:any) => {
                     show all
                 </Text>
             </View>
-            <View className=''>
-                {
-                    
-                }
+            <View className='mt-5'>
+                <FlatList 
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    data={mostPopularPlaces}
+                    keyExtractor={(item)=>item.name}
+                    renderItem={({item})=>(
+                        <View className=''>
+                            <VisitCard 
+                                image={item.image}
+                                height={screen_height * 0.3}
+                                column_width={screen_width*0.9}
+                            />
+                            <View className='px-2 flex-row items-center justify-between'>
+                                <Text className={theme == 'dark'?
+                                    'text-white font-semibold':
+                                    'text-black font-semibold'
+                                }>
+                                    {item.name}
+                                </Text>
+                                <Icon
+                                    name="arrow-right"
+                                    color="gray"
+                                    size={22} 
+                                />
+                            </View>
+                        </View>
+                        
+                    )}
+                />
             </View>
         </View>
     </View>

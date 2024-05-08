@@ -34,31 +34,31 @@ const Profile = (props:any) => {
           </View>
         </View>
         <View className='mt-5 mx-5'>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>username</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>Elon01</Text>
           </View>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>email</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>elonmusk08@gmail.com</Text>
           </View>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>phone</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>+1 (909)-781-635-17</Text>
           </View>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>date of birth</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>27th March 1970</Text>
           </View>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>address</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>San Francisco, street 907</Text>
           </View>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>first name</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>Elon</Text>
           </View>
-          <View className='flex-row items-center justify-between pb-5 my-3 border border-b-gray-400'>
+          <View className='flex-row items-center justify-between pb-5 my-3 border-b-[1px] border-gray-400'>
             <Text className={theme=='dark'?'text-gray-400 capitalize':'text-gray-400 capitalize'}>last name</Text>
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>Musk</Text>
           </View>

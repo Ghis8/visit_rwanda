@@ -8,16 +8,40 @@ export type PlaceProp={
 
 export type citiesProps={
     id:number
-    city:string 
+    city:string,
+    hotels:{
+        name:string
+        images:string[],
+        type:string
+        price:number,
+        location:string
+    }[] 
     popular:boolean 
     places:PlaceProp[]
     description:string
+}
+
+type popularPlace={
+    name:string
+    image:string
+    desc?:string
+    address?:string
+    favorite:boolean
 }
 
 export const cities:citiesProps[]=[
     {
         id:1,
         popular:true,
+        hotels:[
+            {
+                name:'',
+                images:[],
+                type:'',
+                price:0,
+                location:''
+            }
+        ],
         city:'Kigali',
         places:[
             {
@@ -118,6 +142,15 @@ export const cities:citiesProps[]=[
     {
         id:2,
         popular:false,
+        hotels:[
+            {
+                name:'',
+                images:[],
+                type:'',
+                price:0,
+                location:''
+            }
+        ],
         city:'Rubavu',
         places:[
             {
@@ -147,152 +180,133 @@ export const cities:citiesProps[]=[
     {
         id:3,
         popular:false,
-        city:'',
-        places:[
+        hotels:[
             {
                 name:'',
-                image:'',
-                desc:'',
-                address:'',
-                favorite:false
+                images:[],
+                type:'',
+                price:0,
+                location:''
             }
         ],
-        description:''
+        city:'Ruhengeri',
+        places:[
+            {
+                name:'Volcanoes National Park',
+                image:require("../assets/volcanoes-national-park.jpg"),
+                desc:"The \"Parc National de Volcans\" (or PNV as it's known by locals) lies along the Virunga Mountains, with 8 ancient volcanoes, which are shared by Rwanda, Uganda and the Democratic Republic of Congo. Just a short two hour drive from Rwanda's capital of Kigali, the park is a central location for exploring some distinctly Rwandan experiences. While a visit to the mountain gorillas is often at the top of visitor, the dramatic landscape also offers thrilling hiking and visits to the fascinating golden monkeys.",
+                address:'Ruhengeri',
+                favorite:false
+            },
+            {
+                name:'Inshuti Arts and Culture Center',
+                image:require('../assets/art-ruhengeri.jpg'),
+                desc:'A creative art center/ gallery with a fast food restaurant and refreshments bus',
+                address:'Ruhengeri',
+                favorite:false
+            },
+            {
+                name:'Mount Sabyinyo',
+                image:require('../assets/mount-sabyinyo.jpeg'),
+                desc:'Mount Sabyinyo is the oldest volcano of the range. It is north-east of Lake Kivu, one of the African Great Lakes, and west of Lake Bunyonyi in Uganda',
+                address:'Rutshuru; Musanze',
+                favorite:false
+            },
+            {
+                name:'Mount Karisimbi',
+                image:require("../assets/mount-karisimbi.jpg"),
+                desc:"Mount Karisimbi a stratovolcano in the Virunga Mountains on the border between Rwanda and the Democratic Republic of Congo. At 4,507 metres (14,787 ft), Karisimbi is the highest of the eight major mountains of the mountain range, which is a part of Albertine Rift, the western branch of the East African Rift. Karisimbi is flanked by Mikeno to the north, Bisoke to the east and Nyiragongo to the west, on the other side of the Rift Valley. Karisimbi is the 11th highest mountain of Africa.",
+                address:'Nord-Kivu; Nord; Ouest',
+                favorite:false
+            },
+            {
+                name:'Mount Bisoke',
+                image:require('../assets/mount-bisoke-seen-from.jpg'),
+                desc:'Mt. Bisoke is one of the eight volcanoes in the Virunga mountains range of the albertine Rift, the western part of east African rift.',
+                address:'Rutshuru; Musanze',
+                favorite:false
+            },
+        ],
+        description:"Ruhengeri, also known as Musanze or Muhoza, is the third largest city in Rwanda and the capital of Musanze District in the Northern Province of Rwanda. The city has a population of 135,000 as of the 2022 census"
     },
     {
         id:4,
         popular:false,
-        city:'',
-        places:[
+        hotels:[
             {
                 name:'',
-                image:'',
-                desc:'',
-                address:'',
-                favorite:false
+                images:[],
+                type:'',
+                price:0,
+                location:''
             }
         ],
-        description:''
-    },
-    {
-        id:5,
-        popular:false,
-        city:'',
+        city:'Butare',
         places:[
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:'Murambi Genocide Memorial Center',
+                image:require("../assets/hauptgebaude.jpg"),
+                desc:"This is a very educational, genocide, museum, and memorial, away from all the tourists. We were the only foreigners here the day we came, and the manager of the museum took us around after all the school kids left. There’s many buildings here, some of them holding the skeletons that were not relocated, which really helped my kids understand the gravity, like no museum could do before. They also have memorials to the dead and list of the perpetrators. There’s also plaques explaining that the French people caused this genocide, how the French peacekeepers taped the locals and played volleyball on the graves. Much better than the museums in Kigali, which are more sanitized.",
+                address:'Murambi',
                 favorite:false
-            }
-        ],
-        description:''
-    },
-    {
-        id:6,
-        popular:false,
-        city:'',
-        places:[
+            },
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:'The Ethnographic Museum',
+                image:require('../assets/national-museum-of-rwanda.jpg'),
+                desc:"Tradition remains alive in this modern museum, tastefully displaying many examples of African life and culture.",
+                address:'NR1, Butare',
                 favorite:false
-            }
-        ],
-        description:''
-    },
-    {
-        id:7,
-        popular:false,
-        city:'',
-        places:[
+            },
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:'Butare catholic Cathedral',
+                image:require("../assets/exterior.jpg"),
+                desc:"The Our Lady of Wisdom (French: Cathédrale Notre-Dame de la Sagesse) or simply Cathedral of Butare, is a religious building belonging to the Catholic Church and is located in the town of Butare, in the southern part of the African country of Rwanda.",
+                address:'Butare',
                 favorite:false
             }
+
         ],
-        description:''
-    },
-    {
-        id:8,
-        popular:false,
-        city:'',
-        places:[
+        description:"Butare (Kinyarwanda: [βú.tɑ́.ɾe]), also known as Huye and formerly known as Astrida, is a city with a population of 75,000 (2022 census) in the Southern Province of Rwanda and the capital of Huye district. It is the fifth largest town in Rwanda by population."
+    }
+    
+]
+
+export const mostPopularPlaces:popularPlace[]=[
+   
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:"Niyo Art Gallery",
+                image:require("../assets/entrance.jpg"),
+                desc:"Niyo Arts center is a place for creativity to thrive; a safe haven where Rwandan artists can come and experiment with their art form, be it painting, sculpture, dance, music or drumming. The artists in residence come from all over Africa, so you can expect to see a vast array of African art on display. Niyo Art center provides a space where Rwandan creative artists can explore their talents and express themselves freely. In addition to the art, We dedicate our efforts to improving our community by giving 40% of our profit to Niyo foundation, NGO that supports women and children living in poverty in Rwanda.",
+                address:"",
                 favorite:false
-            }
-        ],
-        description:''
-    },
-    {
-        id:9,
-        popular:false,
-        city:'',
-        places:[
+            },
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:"Kimironko Market",
+                image:require('../assets/kimirongko-market.jpg'),
+                desc:"",
+                address:"",
                 favorite:false
-            }
-        ],
-        description:''
-    },
-    {
-        id:10,
-        popular:false,
-        city:'',
-        places:[
+            },
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:"Inema Art Center",
+                image:require('../assets/peacefull-place.jpg'),
+                desc:"Founded in 2012 by brothers and self-taught painters Emmanuel Nkuranga and Innocent Nkurunziza, the Inema Arts Centre's mission is to spur creativity for personal, social, and economic growth.At its core, Inema provides space for 10 artists-in-residence to explore their creative talent. Specialising in contemporary african art, Inema's artists produce painting, sculpture, and mixed media expressions, all of which is showcased at the Gallery at Inema Arts Center.Inema is also home to the following- Nziza Artworks, featuring bespoke jewelry, African linens and leatherworks made by women at the onsite Nziza Workshop- Art with a Mission, training children with limitted resources art to give them livelihood;- Inema Dance, our youth cultural dance troupe, Inema art center provides a room for weekly traditional dance classes to the experts .Inema is open daily from 8AM to 8 PM, located in Kigali in the suburb of Kacyiru on KG 563 Street. Contact ",
+                address:"",
                 favorite:false
-            }
-        ],
-        description:''
-    },
-    {
-        id:11,
-        popular:false,
-        city:'',
-        places:[
+            },
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:"Nyamata Church",
+                image:require('../assets/1660967-nyamata-church.jpg'),
+                desc:"Visited with our group on an OAT adventure. Our local guide was excellent & provided a moving & factual description of the emotionally charge massacre in 1994. The group was in tears as we imagined the horror of that day & the days to follow. A must see to not only remember what hate can cause, but to see how the ability to forgive can heal a country & it's people.",
+                address:"Nyamata",
                 favorite:false
-            }
-        ],
-        description:''
-    },
-    {
-        id:12,
-        popular:false,
-        city:'',
-        places:[
+            },
             {
-                name:'',
-                image:'',
-                desc:'',
-                address:'',
+                name:"Iby'iwacu Cultural Village",
+                image:require('../assets/come-and-enjoy-our-traditional.jpg'),
+                desc:"We learned about Rwanda daily life. The singing, drumming and dancing were wonderful. There was even a wedding ceremony. The whole experience was a lot of fun and entertaining. They have you participate which added to the experience.",
+                address:"",
                 favorite:false
             }
-        ],
-        description:''
-    },
 ]
 
