@@ -99,16 +99,16 @@ const Home = (props:any) => {
             </View>
             <View className='mt-5'>
                 <FlatList 
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
+                    
+                    showsVerticalScrollIndicator={false}
                     data={mostPopularPlaces}
                     keyExtractor={(item)=>item.name}
                     renderItem={({item})=>(
-                        <View className=''>
+                        <View className='mb-5'>
                             <VisitCard 
                                 image={item.image}
-                                height={screen_height * 0.3}
-                                column_width={screen_width*0.9}
+                                height={screen_height * 0.4}
+                                column_width={screen_width*0.95}
                             />
                             <View className='px-2 flex-row items-center justify-between'>
                                 <Text className={theme == 'dark'?

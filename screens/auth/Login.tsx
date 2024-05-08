@@ -60,7 +60,7 @@ const Login = (props:any) => {
         <TextInput 
           autoCapitalize='none'
           inputMode='email'
-          className={emailError?'w-3/4 mb-5 py-3 text-red-600 px-2 border border-b-red-500 ml-10':'w-3/4 mb-5 py-3 px-2 border border-b-gray-500 ml-10'}
+          className={emailError?'w-3/4 mb-5 py-3 text-red-600 px-2 border-b-[1px] border-red-500 ml-10':'w-3/4 mb-5 py-3 px-2 border-b-[1px] border-gray-500 ml-10'}
           placeholder='Email Address'
           placeholderTextColor='gray'
           onChangeText={(text)=>setEmail(text.trim())}
@@ -69,7 +69,7 @@ const Login = (props:any) => {
           <TextInput
             autoCapitalize='none'
             secureTextEntry={visible} 
-            className={passwordError?'w-3/4  py-3 text-red-600 px-2 border border-b-red-500 ml-10':'w-3/4  py-3 px-2 border border-b-gray-500 ml-10'}
+            className={passwordError?'w-3/4  py-3 text-red-600 px-2 border-b-[1px] border-red-500 ml-10':'w-3/4  py-3 px-2 border-b-[1px] border-gray-500 ml-10'}
             placeholder='Password'
             placeholderTextColor='gray'
             onChangeText={(text)=>setPassword(text.trim())}
