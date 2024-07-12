@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { ValidateEmailAddress, ValidatePassword } from '../../utils/validation'
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
+import Loader from '../../components/Loader'
 
 const Login = (props:any) => {
   const theme=useColorScheme()
@@ -12,19 +13,24 @@ const Login = (props:any) => {
   const [visible,setVisible]=useState<boolean>(true)
   const [error,setError]=useState<string[]>([])
   const [password,setPassword]=useState<string>('')
+  const [isLoading,setIsLoading]=useState<boolean>(false)
 
   const signIn=()=>{
+    setIsLoading(true)
     if(ValidateEmailAddress(email)){
       if(email== 'test@gmail.com'){
+        setIsLoading(false)
         return props.navigation.navigate('Home',{screen:'explore'})
       }setError([...error,"invalid Credential"])
       
     }
     if(!ValidateEmailAddress(email)){
+      setIsLoading(false)
       setEmailError(true)
       setError([...error,"Invalid Email Address"])
     }
     if(!ValidatePassword(password)){
+      setIsLoading(false)
       setPasswordError(true)
       setError([...error,"Password must contain at least 6 characters"])
     }
@@ -32,7 +38,6 @@ const Login = (props:any) => {
     setPasswordError(false)
     setError([])
 
-    
   }
 
   return (
@@ -41,6 +46,9 @@ const Login = (props:any) => {
         theme=='dark'?'bg-black flex-1 px-3':'bg-white flex-1 px-3'
       }
     >
+      {
+        isLoading && <Loader isLoading />
+      }
       <TouchableOpacity
         onPress={()=>props.navigation.goBack()}
         className='mt-5'

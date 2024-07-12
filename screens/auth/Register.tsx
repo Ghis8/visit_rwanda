@@ -13,6 +13,7 @@ const Register = (props:any) => {
   const [password,setPassword]=useState<string>('')
   const [confirmPassword,setConfirmPassword]=useState<string>('')
   const [confirmPasswordError,setConfirmPasswordError]=useState<boolean>(false)
+  
   const signUp=()=>{
     
   }
