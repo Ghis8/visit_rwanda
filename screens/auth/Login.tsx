@@ -13,7 +13,7 @@ const Login = (props:any) => {
   const [visible,setVisible]=useState<boolean>(true)
   const [error,setError]=useState<string[]>([])
   const [password,setPassword]=useState<string>('')
-  const [isLoading,setIsLoading]=useState<boolean>(true)
+  const [isLoading,setIsLoading]=useState<boolean>(false)
 
   const signIn=()=>{
     setIsLoading(true)

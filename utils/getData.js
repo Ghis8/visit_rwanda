@@ -1,3 +1,3 @@
-const data=require('../constant/places.json')
+const data=require('../constant/places')
 
 console.log("data=>",data)

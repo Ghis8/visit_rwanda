@@ -3,7 +3,102 @@
         "kigali":{
             "restaurants":[
                 {
+                    "id":"1",
+                    "name":"Fusion Restaurant",
+                    "images":[
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/90/0d/e1/organic-gardens-outdoor.jpg?w=1100&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/59/88/33/fusion-outdoor-pergola.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/90/0d/a9/fusion-breakfast.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/59/88/82/wedding-decor-at-fusion.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/59/88/02/weddings-poolside-at.jpg?w=1200&h=-1&s=1"
+                    ],
+                    "address":"KN 7 Ave, Kigali",
+                    "phone":"0784750888",
+                    "opening":[
+                        "Saturday, 6am - 11pm",
+                        "Sunday, 6am - 11pm",
+                        "Monday, 6am - 11pm",
+                        "Tuesday, 6am - 11pm",
+                        "Wednesday, 6am - 11pm",
+                        "Thursday, 6am - 11pm",
+                        "Friday, 6am - 11pm"
+                    ],
+                    "description":"Fusion Restaurant is located at The Retreat, the new luxury boutique hotel in Kigali featuring farm-to-table international fusion cuisine, top-notch service, and magnificent poolside seating. From the owners of Heaven, Fusion provides Kigali visitors with a fresh new innovative menu, creative cocktails and hand-picked wines from South Africa!",
+                    "offers":[
+                        {
+                            "cuisines":"International, Fusion"
+                        },
+                        {
+                            "special-diets":"Vegetarian Friendly, Vegan Options, Gluten Free Options"
+                        },
+                        {
+                            "meals":"Breakfast, Lunch, Dinner, Drinks"
+                        },
+                        {
+                            "features":"Reservations, Outdoor Seating, Seating, Serves Alcohol, Full Bar, Free Wifi, Accepts Credit Cards, Table Service"
+                        }
+                    ],
+                    "ratings":"5.0",
+                    "review":"271 reviews"
+                },
+                {
+                    "id":"2",
+                    "name":"Filini Restaurant & Bar Kigali",
+                    "images":[
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/7a/99/29/20180626-074556-largejpg.jpg?w=900&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/49/20/d8/20191204-203635-largejpg.jpg?w=1000&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/7a/99/2a/20180626-074626-largejpg.jpg?w=800&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/de/65/8f/steak.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c3/cd/4a/photo0jpg.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c3/cd/50/photo6jpg.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c3/cd/4b/photo1jpg.jpg?w=1200&h=-1&s=1",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c3/cd/4c/photo2jpg.jpg?w=1200&h=-1&s=1"
+                    ],
+                    "address":"https://maps.google.com/maps?saddr=&daddr=KG%202%20Roundabout%20Radisson%20Blu%20&%20Convention%20Center,%20Kigali%20Rwanda@-1.954688,30.093452",
+                    "phone":"+250724000071",
+                    "opening":[
+                        "Saturday, 12pm - 11pm",
+                        "Sunday, 12pm - 11pm",
+                        "Monday, 12pm - 11pm",
+                        "Tuesday, 12pm - 11pm",
+                        "Wednesday, 12pm - 11pm",
+                        "Thursday, 12pm - 11pm",
+                        "Friday, 12pm - 11pm"
+                    ],
+                    "description":"Our on-site authentic Italian restaurant offers delectable food along with in a unique setting featuring sophisticated style and casual design. Feel as though you are in the fresh atmosphere of a mercato as you enjoy the walk through seasonal deli and show kitchen or just relish the delicious food that the chefs whip up for you.",
+                    "offers":[
+                        {
+                            "cuisines":"Italian, Pizza, International, Mediterranean, European, Tuscan, Romana, Lazio, Sicilian, Sardinian, Central-Italian, Southern-Italian"
+                        },
+                        {
+                            "special-diets":"Vegetarian Friendly, Vegan Options, Gluten Free Options"
+                        },
+                        {
+                            "meals":"Lunch, Dinner, Drinks"
+                        },
+                        {
+                            "features":"Takeout, Reservations, Outdoor Seating, Private Dining, Seating, Parking Available, Highchairs Available, Wheelchair Accessible, Serves Alcohol, Full Bar, Wine and Beer, Accepts American Express, Accepts Mastercard, Accepts Visa, Free Wifi, Accepts Credit Cards, Family style"
+                        }
+                    ],
+                    "ratings":"5.0",
+                    "review":"484 reviews"
+                },
+                {
+                    "name":"",
+                    "images":[
 
+                    ],
+                    "address":"",
+                    "phone":"",
+                    "opening":[
+
+                    ],
+                    "description":"",
+                    "offers":[
+
+                    ],
+                    "ratings":"",
+                    "review":""
                 }
             ],
             "hotels":[
