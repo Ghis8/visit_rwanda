@@ -6,6 +6,8 @@ import {
   Image,
   ActivityIndicator
 } from 'react-native';
+import { useAppSelector } from '../redux/hooks';
+import { selectTheme } from '../redux/slices/themeSlice';
 
 interface MyProps{
     isLoading:boolean
@@ -29,6 +31,7 @@ class Loader extends Component<MyProps,MyState> {
   }
 
   render() {
+    
     return (
       <Modal
         transparent={true}
@@ -38,7 +41,7 @@ class Loader extends Component<MyProps,MyState> {
         onRequestClose={() => { }}>
         <View style={styles.modalBackground}>
           <View style={styles.activityIndicatorWrapper}>
-            <ActivityIndicator animating={this.state.isLoading} color="#FE8100" />
+            <ActivityIndicator animating={this.state.isLoading} color="rgb(29 78 216)" />
           </View>
         </View>
       </Modal>
