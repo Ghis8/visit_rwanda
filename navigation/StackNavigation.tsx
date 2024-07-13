@@ -8,11 +8,16 @@ import GetStarted from '../screens/GetStarted'
 import Home from '../screens/Home'
 import BottomStackNavigation from './BottomStackNavigation'
 import CompleteResgistration from '../screens/CompleteResgistration'
+import BootSplash from "react-native-bootsplash";
 
 const Stack=createNativeStackNavigator()
 const StackNavigation = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer 
+      onReady={() => {
+        BootSplash.hide();
+      }}
+    >
       <Stack.Navigator
         screenOptions={{
           headerShown:false
