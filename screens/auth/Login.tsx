@@ -1,4 +1,4 @@
-import { View, Text, useColorScheme, ScrollView, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, useColorScheme, ScrollView, TouchableOpacity, TextInput, Platform } from 'react-native'
 import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { ValidateEmailAddress, ValidatePassword } from '../../utils/validation'
@@ -120,16 +120,19 @@ const Login = (props:any) => {
           <View className='border border-b-gray-500 w-1/3'></View>
         </View>
 
-        <View className='flex-row items-center justify-between w-2/4 mx-auto my-5'>
+        <View className={Platform.OS =='android'? 'flex-row items-center justify-around w-2/4 mx-auto my-5':'flex-row items-center justify-between w-2/4 mx-auto my-5'}>
           <TouchableOpacity>
             <Icon name="google" size={28} color="red" />
           </TouchableOpacity>
           <TouchableOpacity>
             <Icon name="facebook" size={28} color="blue" />
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Icon name="apple" size={28} color={theme=='dark'?'white':"black"} />
-          </TouchableOpacity>
+          {
+            Platform.OS == 'android' ? '': 
+            <TouchableOpacity>
+              <Icon name="apple" size={28} color={theme=='dark'?'white':"black"} />
+            </TouchableOpacity>
+          }
         </View>
         
         <View className='flex-row items-center gap-2 justify-center mt-3'>
