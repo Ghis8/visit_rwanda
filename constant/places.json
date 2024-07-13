@@ -1,0 +1,22 @@
+{
+    "rwanda":{
+        "kigali":{
+            "restaurants":[
+                {
+
+                }
+            ],
+            "hotels":[
+                {
+                    "name":"M Hotel"
+                }
+            ]
+        },
+        "gisenyi":{
+
+        }
+    },
+    "tanzania":{
+
+    }
+}
