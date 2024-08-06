@@ -1,4 +1,4 @@
-import { View, Text, useColorScheme, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { View, Text, useColorScheme, ScrollView, Image, TouchableOpacity, ToastAndroid } from 'react-native'
 import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
@@ -63,6 +63,18 @@ const Profile = (props:any) => {
             <Text className={theme=='dark'?'text-orange-800':'text-orange-800'}>Musk</Text>
           </View>
         </View>
+        <TouchableOpacity 
+          onPress={()=>{
+            ToastAndroid.show("Logging Out...",ToastAndroid.SHORT)
+            setTimeout(()=>{
+              props.navigation.replace("getStarted")
+            },2000)
+            
+          }}
+          className='bg-red-600 w-2/4 rounded-lg mx-auto my-4 py-3'
+        >
+          <Text className='text-center text-white font-semibold'>Logout</Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   )
